@@ -1,5 +1,5 @@
 import React from 'react'
-import Typed from 'react-typed'
+// import Typed from 'react-typed'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 const Home = () => {
   return (
@@ -22,15 +22,18 @@ const Home = () => {
         <div className='flex justify-center md:justify-start'>
           <p className='text-lg text-gray-200 pb-6 tracking-[.05rem] text-center md:text-left'>
             I'm proficient in
+            <span className='font-bold text-emerald-400 md-text-5xl sm-text-4xl text-xl pl-2 z-100'>
+              Reactjs
+            </span>
           </p>
-          <Typed
+          {/* <Typed
             className='font-bold text-emerald-400 md-text-5xl sm-text-4xl text-xl pl-2 z-100'
             strings={['HTML', 'CSS', 'JAVASCRIPT', ' REACTJS', 'GIT']}
             typeSpeed={120}
             backSpeed={140}
             cursorChar='/>'
             loop
-          />
+          /> */}
         </div>
 
         <div className=''>
