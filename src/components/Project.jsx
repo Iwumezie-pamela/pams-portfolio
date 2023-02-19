@@ -17,8 +17,8 @@ const Projects = () => {
     {
       id: 2,
       image: pamsportfolio,
-      live: 'https://hacker-news-react-gamma.vercel.app/',
-      code: 'https://github.com/Iwumezie-pamela/Hacker-news-react',
+      live: 'https://pams-portfolio.vercel.app/',
+      code: 'https://github.com/Iwumezie-pamela/pams-portfolio',
     },
     {
       id: 3,
