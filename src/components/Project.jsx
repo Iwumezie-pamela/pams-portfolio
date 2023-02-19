@@ -2,7 +2,7 @@ import React from 'react'
 import comfysloth from '../assets/portfolio/comfysloth.jpg'
 import pamsportfolio from '../assets/portfolio/pamsportfolio.jpg'
 import quiz from '../assets/portfolio/quiz.jpg'
-import news from '../assets/portfolio/news.jpg'
+import backroad from '../assets/portfolio/backroad.jpg'
 import cocktail from '../assets/portfolio/cocktail.jpg'
 import menu from '../assets/portfolio/menu.jpg'
 
@@ -28,9 +28,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      image: news,
-      live: 'https://news-homepage-henna.vercel.app/',
-      code: 'https://github.com/Iwumezie-pamela/News-Homepage',
+      image: backroad,
+      live: 'https://backroad-app.vercel.app/',
+      code: 'https://github.com/Iwumezie-pamela/Backroad-App-',
     },
     {
       id: 5,
