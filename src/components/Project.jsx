@@ -17,7 +17,7 @@ const Projects = () => {
     {
       id: 2,
       image: pamsportfolio,
-      live: 'https://pams-portfolio.vercel.app/',
+     live:'https://pams-portfolio.vercel.app/',
       code: 'https://github.com/Iwumezie-pamela/pams-portfolio',
     },
     {
