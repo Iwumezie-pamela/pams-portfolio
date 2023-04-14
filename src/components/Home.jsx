@@ -1,6 +1,6 @@
-import React from 'react'
-// import Typed from 'react-typed'
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 const Home = () => {
   return (
     <section
@@ -15,10 +15,37 @@ const Home = () => {
         <h2 className=' font-extrabold text-center uppercase text-2xl pb-4 md:text-5xl lg:text-6xl '>
           A frontend developer
         </h2>
-        <p className='text-md md:text-lg text-center md:text-left max-w-sm  md:max-w-2xl text-gray-200 pb-4 md:mx-0 p-2 mx-auto '>
+        <p className='text-base md:text-lg text-center md:text-left max-w-sm  md:max-w-2xl text-gray-200 pb-2 md:mx-0 px-2 mx-auto '>
           I'm a creative developer devoted to crafting user friendly and
           interactive frontend websites focused on simplicity and purpose.
         </p>
+        <div className='flex items-center px-2 pb-3'>
+          <p className='text-base lg:text-lg mr-1'>I'm proficient in </p>
+          <TypeAnimation
+            sequence={[
+              '< Html />',
+              2000,
+              '< Css />',
+              2000,
+              '< Js />',
+              2000,
+              '< Tailwind Css />',
+              2000,
+              '< React js />',
+              2000,
+              '< Git & Github />',
+              2000,
+              '< Firebase />',
+              2000,
+              '< Styled Component />',
+              2000,
+            ]}
+            wrapper='span'
+            cursor={true}
+            repeat={Infinity}
+            className='text-emerald-400 inline-block text-lg lg:text-xl font-bold'
+          />
+        </div>
 
         <div className=''>
           <a
@@ -33,7 +60,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

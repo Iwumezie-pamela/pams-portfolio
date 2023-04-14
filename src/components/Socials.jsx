@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Socials = () => {
   const links = [
@@ -46,7 +46,7 @@ const Socials = () => {
       style: 'rounded-br-md',
       download: true,
     },
-  ]
+  ];
 
   return (
     <div className='hidden md:flex flex-col top-[55%] right-0 fixed'>
@@ -71,14 +71,14 @@ const Socials = () => {
                 {child}
               </a>
             </li>
-          )
+          );
         })}
         <div className='relative flex-col items-center justify-center'>
           <div className='after:block after:bg-emerald-400 after:w-[1px] after:h-28 after:mx-auto after:my-2'></div>
         </div>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Socials
+export default Socials;

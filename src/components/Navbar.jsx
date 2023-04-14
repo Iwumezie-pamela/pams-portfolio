@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const links = [
@@ -28,18 +28,18 @@ const Navbar = () => {
       text: 'contacts',
       href: '#contacts',
     },
-  ]
+  ];
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
 
   const closeSideBar = () => {
-    setNav(false)
-  }
+    setNav(false);
+  };
 
   let activeStyle = {
     color: '#00df9a',
     fontWeight: 'bold',
-  }
+  };
 
   return (
     <header>
@@ -55,11 +55,11 @@ const Navbar = () => {
             return (
               <li
                 key={id}
-                className='px-4 text-gray-400 cursor-pointer capitalize font-medium hover:text-white ease-in-out duration-300 relative before:w-0 before:h-0.5 before:absolute before:bottom-0 before:transition-all before:duration-300 mb-0 hover:before:w-8 hover:before:bg-[#00df9a] hover:scale-105'
+                className='px-4 text-gray-400 cursor-pointer capitalize font-medium hover:text-white ease-in-out duration-300 relative before:w-0 before:h-0.5 before:absolute before:bottom-0 before:transition-all before:duration-300 mb-0 hover:before:w-8 hover:before:bg-[#00df9a] hover:scale-105 '
               >
                 <a href={href}>{text}</a>
               </li>
-            )
+            );
           })}
         </ul>
 
@@ -83,13 +83,13 @@ const Navbar = () => {
                     {text}
                   </a>
                 </li>
-              )
+              );
             })}
           </ul>
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
