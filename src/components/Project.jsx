@@ -11,14 +11,14 @@ const Projects = () => {
     {
       id: 1,
       image: comfysloth,
-      live: 'https://hacker-news-react-gamma.vercel.app/',
-      code: 'https://github.com/Iwumezie-pamela/Hacker-news-react',
+      live: 'https://comfy-sloth-e-commerce-project.netlify.app/',
+      code: 'https://github.com/Iwumezie-pamela/Comfy-Sloth-React-Project',
     },
     {
       id: 2,
       image: pamsportfolio,
-      live: 'https://hacker-news-react-gamma.vercel.app/',
-      code: 'https://github.com/Iwumezie-pamela/Hacker-news-react',
+     live:'https://pams-portfolio.vercel.app/',
+      code: 'https://github.com/Iwumezie-pamela/pams-portfolio',
     },
     {
       id: 3,
