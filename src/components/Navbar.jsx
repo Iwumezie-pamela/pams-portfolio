@@ -36,11 +36,6 @@ const Navbar = () => {
     setNav(false);
   };
 
-  let activeStyle = {
-    color: '#00df9a',
-    fontWeight: 'bold',
-  };
-
   return (
     <header>
       <nav className='flex justify-between items-center w-full h-20 px-4 text-white bg-[#000300] fixed md:px-20 z-10'>
