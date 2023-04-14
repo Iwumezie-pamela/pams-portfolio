@@ -78,7 +78,7 @@ const Experience = () => {
             </p>
           </div>
         </Slide>
-        <Slide direction='up'>
+        <Slide direction='right'>
           <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
             {techStacks.map(({ id, image, name, style }) => {
               return (

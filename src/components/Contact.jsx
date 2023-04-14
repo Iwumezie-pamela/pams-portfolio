@@ -19,7 +19,7 @@ const Contact = () => {
           </div>
         </Slide>
 
-        <Slide direction='up'>
+        <Slide direction='right'>
           <div className='flex justify-center items-center'>
             <form
               action='https://getform.io/f/8091fbf0-2f47-4b2f-9620-c6c65ea41fc1'
