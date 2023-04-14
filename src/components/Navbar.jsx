@@ -63,12 +63,14 @@ const Navbar = () => {
           </ul>
         </Slide>
 
-        <div
-          className='block md:hidden cursor-pointer pr-4 z-10 text-gray-400 hover:text-white ease-in-out duration-300'
-          onClick={() => setNav(!nav)}
-        >
-          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-        </div>
+        <Slide direction='right' duration={1000}>
+          <div
+            className='block md:hidden cursor-pointer pr-4 z-10 text-gray-400 hover:text-white ease-in-out duration-300'
+            onClick={() => setNav(!nav)}
+          >
+            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </div>
+        </Slide>
 
         {/* mobile menu */}
         {nav && (
