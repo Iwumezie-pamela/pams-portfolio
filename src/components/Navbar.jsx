@@ -48,8 +48,8 @@ const Navbar = () => {
           </a>
         </Slide>
 
-        <Slide direction='right' duration={1000}>
-          <ul className='hidden md:flex'>
+        <ul className='hidden md:flex'>
+          <Slide direction='right' duration={1000}>
             {links.map(({ id, text, href }) => {
               return (
                 <li
@@ -60,17 +60,16 @@ const Navbar = () => {
                 </li>
               );
             })}
-          </ul>
-        </Slide>
-
-        <Slide direction='right' duration={1000}>
-          <div
-            className='block md:hidden cursor-pointer pr-4 z-10 text-gray-400 hover:text-white ease-in-out duration-300'
-            onClick={() => setNav(!nav)}
-          >
+          </Slide>
+        </ul>
+        <div
+          className='block md:hidden cursor-pointer pr-4 z-10 text-gray-400 hover:text-white ease-in-out duration-300'
+          onClick={() => setNav(!nav)}
+        >
+          <Slide direction='right' duration={1000}>
             {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-          </div>
-        </Slide>
+          </Slide>
+        </div>
 
         {/* mobile menu */}
         {nav && (
