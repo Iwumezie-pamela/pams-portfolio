@@ -8,7 +8,7 @@ const Contact = () => {
       className='bg-gradient-to-b from-black to-gray-900 w-full md:h-screen text-white p-4'
     >
       <div className='flex flex-col justify-center max-w-screen-lg mx-auto h-full w-full'>
-        <Slide direction='left'>
+        <Slide direction='left' duration={1000}>
           <div className='pb-8'>
             <p className='text-4xl font-bold relative before:h-1 before:rounded-lg before:absolute before:bottom-0 before:w-28 md:pt-6 before:bg-emerald-400 pb-2 pt-16 '>
               Contact
@@ -19,7 +19,7 @@ const Contact = () => {
           </div>
         </Slide>
 
-        <Slide direction='right'>
+        <Slide direction='right' duration={2000}>
           <div className='flex justify-center items-center'>
             <form
               action='https://getform.io/f/8091fbf0-2f47-4b2f-9620-c6c65ea41fc1'

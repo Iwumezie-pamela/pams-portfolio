@@ -17,7 +17,7 @@ const About = () => {
       </h1>
 
       <div className='flex flex-col justify-center max-w-screen-lg mx-auto h-full w-full md:flex-row '>
-        <Slide direction='left'>
+        <Slide direction='left' duration={2000}>
           <div className=' mb-6 '>
             <img
               src={image}
@@ -26,7 +26,7 @@ const About = () => {
             />
           </div>
         </Slide>
-        <Slide direction='right'>
+        <Slide direction='right' duration={2000}>
           <div>
             <p className='max-w-md p-2 text-center md:text-left leading-7 pt-8 md:pt-0 md:max-w-[1042px] mx-auto lg:text-lg'>
               I am a Technically astute front-end developer with an experience

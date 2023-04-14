@@ -52,7 +52,7 @@ const Projects = () => {
       className='bg-gradient-to-b from-black to-gray-900 w-full md:h-screen text-white'
     >
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <Slide direction='left'>
+        <Slide direction='left' duration={1000}>
           {' '}
           <div className='pb-8'>
             <p className='text-4xl font-bold relative before:h-1 before:rounded-lg before:absolute before:bottom-0 pb-2 pt-16 before:w-28 md:pt-8  before:bg-emerald-400'>
@@ -62,7 +62,7 @@ const Projects = () => {
           </div>
         </Slide>
 
-        <Slide direction='right'>
+        <Slide direction='right' duration={2000}>
           <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-4  px-4 sm:px-0'>
             {portfolio.map(({ id, image, live, code }) => {
               return (

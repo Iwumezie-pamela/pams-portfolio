@@ -68,7 +68,7 @@ const Experience = () => {
       className='bg-gradient-to-b from-black to-gray-900 w-full md:h-screen text-white p-4 '
     >
       <div className='max-w-screen-lg  p-4 mx-auto  flex flex-col justify-center w-full h-full'>
-        <Slide direction='left'>
+        <Slide direction='left' duration={1000}>
           <div className=''>
             <p className='text-4xl font-bold relative before:h-1 before:rounded-lg before:absolute before:bottom-0 before:w-28 md:pt-8  before:bg-emerald-400 pb-2 pt-16  '>
               Tech Stacks
@@ -78,7 +78,7 @@ const Experience = () => {
             </p>
           </div>
         </Slide>
-        <Slide direction='right'>
+        <Slide direction='right' duration={2000}>
           <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
             {techStacks.map(({ id, image, name, style }) => {
               return (
