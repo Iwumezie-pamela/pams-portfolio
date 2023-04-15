@@ -1,15 +1,36 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import { Slide } from 'react-awesome-reveal';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 const Home = () => {
+  const { ref, inView } = useInView();
   return (
     <section
+      ref={ref}
       id='home'
       className='bg-gradient-to-b from-black to-gray-900 md:px-20 text-white h-screen w-full'
     >
-      <div className='max-w-screen-md flex flex-col h-full w-full items-center justify-center  md:items-start'>
-        <Slide direction='left' duration={2000}>
+      {inView && (
+        <motion.div
+          initial={{
+            x: -500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            ease: 'linear',
+            duration: 2,
+            x: { duration: 1 },
+          }}
+          className='max-w-screen-md flex flex-col h-full w-full items-center justify-center  md:items-start'
+        >
           <h1 className='text-xl uppercase text-center md:text-left tracking-wide font-bold pb-4'>
             👋 Hello there, i'm
             <span className='text-emerald-400 font-extrabold'> Pamela</span>
@@ -60,8 +81,8 @@ const Home = () => {
               </span>
             </a>
           </div>
-        </Slide>
-      </div>
+        </motion.div>
+      )}
     </section>
   );
 };

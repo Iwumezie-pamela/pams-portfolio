@@ -5,9 +5,11 @@ import quiz from '../assets/portfolio/quiz.jpg';
 import backroad from '../assets/portfolio/backroad.jpg';
 import cocktail from '../assets/portfolio/cocktail.jpg';
 import menu from '../assets/portfolio/menu.jpg';
-import { Slide } from 'react-awesome-reveal';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
+  const { ref, inView } = useInView();
   const portfolio = [
     {
       id: 1,
@@ -48,22 +50,51 @@ const Projects = () => {
   ];
   return (
     <section
+      ref={ref}
       id='projects'
       className='bg-gradient-to-b from-black to-gray-900 w-full md:h-screen text-white'
     >
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <Slide direction='left' duration={1000}>
-          {' '}
-          <div className='pb-8'>
+        {inView && (
+          <motion.div
+            initial={{
+              x: -500,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className='pb-8'
+          >
             <p className='text-4xl font-bold relative before:h-1 before:rounded-lg before:absolute before:bottom-0 pb-2 pt-16 before:w-28 md:pt-8  before:bg-emerald-400'>
               Portfolio
             </p>
             <p className='py-2 text-lg'>Check out some of my work right here</p>
-          </div>
-        </Slide>
-
-        <Slide direction='right' duration={2000}>
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-4  px-4 sm:px-0'>
+          </motion.div>
+        )}
+        {inView && (
+          <motion.div
+            initial={{
+              x: 500,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-4  px-4 sm:px-0'
+          >
             {portfolio.map(({ id, image, live, code }) => {
               return (
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
@@ -92,8 +123,8 @@ const Projects = () => {
                 </div>
               );
             })}
-          </div>
-        </Slide>
+          </motion.div>
+        )}
       </div>
     </section>
   );

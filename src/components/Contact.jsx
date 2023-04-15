@@ -1,26 +1,58 @@
 import React from 'react';
-import { Slide } from 'react-awesome-reveal';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const { ref, inView } = useInView();
+
   return (
     <section
+      ref={ref}
       id='contacts'
       className='bg-gradient-to-b from-black to-gray-900 w-full md:h-screen text-white p-4'
     >
       <div className='flex flex-col justify-center max-w-screen-lg mx-auto h-full w-full'>
-        <Slide direction='left' duration={1000}>
-          <div className='pb-8'>
+        {inView && (
+          <motion.div
+            initial={{
+              x: -200,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className='pb-8'
+          >
             <p className='text-4xl font-bold relative before:h-1 before:rounded-lg before:absolute before:bottom-0 before:w-28 md:pt-6 before:bg-emerald-400 pb-2 pt-16 '>
               Contact
             </p>
             <p className='py-6'>
               Submit the form below to get in touch with me
             </p>
-          </div>
-        </Slide>
+          </motion.div>
+        )}
 
-        <Slide direction='right' duration={2000}>
-          <div className='flex justify-center items-center'>
+        {inView && (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className='flex justify-center items-center'
+          >
             <form
               action='https://getform.io/f/8091fbf0-2f47-4b2f-9620-c6c65ea41fc1'
               className='flex flex-col w-full md:w-1/2'
@@ -49,8 +81,8 @@ const Contact = () => {
                 Let's talk
               </button>
             </form>
-          </div>
-        </Slide>
+          </motion.div>
+        )}
       </div>
     </section>
   );

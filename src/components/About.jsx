@@ -1,9 +1,11 @@
 import React from 'react';
 import image from '../assets/pamela.jpg';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import { Slide } from 'react-awesome-reveal';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+  const { ref, inView } = useInView();
   return (
     <section
       id='about'
@@ -16,18 +18,54 @@ const About = () => {
         about me
       </h1>
 
-      <div className='flex flex-col justify-center max-w-screen-lg mx-auto h-full w-full md:flex-row '>
-        <Slide direction='left' duration={2000}>
-          <div className=' mb-6 '>
+      <div
+        ref={ref}
+        className='flex flex-col justify-center max-w-screen-lg mx-auto h-full w-full md:flex-row '
+      >
+        {inView && (
+          <motion.div
+            // animate={{ y: 0 }}
+            // initial={{ y: 300 }}
+            // transition={{
+            //   duration: 1.5,
+            //   ease: 'linear',
+            // }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className=' mb-6 '
+          >
             <img
               src={image}
               alt='my profile'
               className=' md:max-w-5xl rounded-2xl mx-auto w-[50%] md:w-[50%] lg:w-[45%] '
             />
-          </div>
-        </Slide>
-        <Slide direction='right' duration={2000}>
-          <div>
+          </motion.div>
+        )}
+        {inView && (
+          <motion.div
+            initial={{
+              x: 500,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <p className='max-w-md p-2 text-center md:text-left leading-7 pt-8 md:pt-0 md:max-w-[1042px] mx-auto lg:text-lg'>
               I am a Technically astute front-end developer with an experience
               in managing and configuring ReactJs. A proven track record of
@@ -46,8 +84,8 @@ const About = () => {
                 <MdOutlineKeyboardArrowRight size={25} className='ml-1' />
               </span>
             </a>
-          </div>
-        </Slide>
+          </motion.div>
+        )}
       </div>
     </section>
   );
